@@ -3,40 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FEMA login page</title>
-    <link rel="stylesheet" href="css/style.css">
-    <!-- You can include additional meta tags, link to stylesheets, or scripts in the head section -->
-    <script type="module" src="js/index.js" defer></script>
+    <title>Enter Access Code</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="index.html">Disasters</a></li>
-            <li><a href="deliver.html">Deliver</a></li>
-            <li><a href="create-disaster.html">Add New</a></li>
-            <li><a href="sign-up.html">Sign Up</a></li>
-            <li><a href="sign-up.html">Sign In</a></li>
-        </ul>
-    </nav>
-</body>
-<body id="form">
-
-  <!-- TODO: START HERE -->
-  <!-- THIS SECTION: This entire form will be handled like the cardContainer below
-  very little actual HTML will be writen and just a referene to the script.js funtion.
-  This will be confusing at first but it will allow us to later incorperate server. -->
-  
-  <!-- Example:--> 
-  <!-- This calls function in script.js that creates elements and the elements within
-      Like this we can easily see a layout and what is where and use stylesheet to adjust
-      the looks, JS for logic and this for layout.-->
-      <div>
-        <input placeholder="search by name" id="search-input">
-        <button id="search-button">Search</button>
+    <div class="container">
+        <h1>Welcome to Our Wedding</h1>
+        <p>Enter your access code to continue:</p>
+        <input type="password" id="accessCode" placeholder="Enter code">
+        <button onclick="checkCode()">Enter</button>
+        <p id="error" class="error"></p>
     </div>
-    <div class="grid-container" id="cardContainer"></div>
-  <!-- TODO: END HERE -->
 
-    
+    <script>
+        function checkCode() {
+            const codes = [
+                "HR-01",
+                "HR-02",
+                "HR-03",
+                "HR-04"
+            ]
+            const correctCode = "WEDDING2025"; // Change this to your actual code
+            const userCode = document.getElementById("accessCode").value;
+
+            if (codes.includes(userCode)) {
+                sessionStorage.setItem("wedding_access", "granted"); // Store session
+                window.location.href = "wedding.html"; // Redirect to main site
+            } else {
+                document.getElementById("error").innerText = "Incorrect code. Please try again.";
+            }
+        }
+
+        // If user already entered the code, send them directly to the site
+        if (sessionStorage.getItem("wedding_access") === "granted") {
+            window.location.href = "wedding.html";
+        }
+    </script>
+
+    <style>
+        body { text-align: center; font-family: Arial, sans-serif; margin-top: 20vh; }
+        .container { width: 300px; margin: auto; padding: 20px; border: 1px solid #ccc; border-radius: 10px; box-shadow: 2px 2px 10px rgba(0,0,0,0.1); }
+        input { padding: 10px; width: 80%; margin: 10px 0; }
+        button { padding: 10px 15px; background: #007BFF; color: white; border: none; cursor: pointer; }
+        .error { color: red; }
+    </style>
 </body>
 </html>
