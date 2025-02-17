@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Make Donations</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script type="module" src="js/donate.js"></script>
+    <style>
+        .hidden{
+            display:none;
+        }
+
+        .result{
+            max-width:80px; 
+        }
+
+        #disaster-image {
+          width: 50%;
+          height: auto;
+          margin-left: 25%;
+        }
+        #topTextBitch{
+          height: auto;
+          align-self: middle;
+        }
+    </style>
+</head>
+<body> 
+  <div id="topTextBitch"> 
+    <h1 id = 'city'>Phoenix</h1>
+    <h2 id = 'type'>Dust Storm</h2>
+  </div>  
+    <img id='disaster-image'>
+    <table class="table table-dark">
+        <thead>
+          <tr>
+            <th scope="col">Need</th>
+            <th scope="col">Quantity</th>
+            <th scope="col">Add Donation</th>
+          </tr>
+        </thead>
+        <tbody id="needs-table">
+          
+        </tbody>
+      </table>
+      <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+        <button class="btn btn-primary button-submit" id="done">Done</button>
+      </div>
+</body>
+</html>
