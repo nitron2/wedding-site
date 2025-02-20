@@ -52,12 +52,16 @@
 
     <link rel="stylesheet" href="css/normalize.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Bootstrap 5 CSS (Latest Version) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/jquery.fancybox.css">
     <link rel="stylesheet" href="css/flexslider.css">
     <link rel="stylesheet" href="css/styles.min.css">
     <link rel="stylesheet" href="css/queries.css">
     <link rel="stylesheet" href="node_modules/animate.css/animate.min.css" onerror="loadCssFromCDN('animate.css')">
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" onerror="loadCssFromCDN('font-awesome.css')">
+    <!-- Bootstrap 5 JS Bundle (Includes Popper) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
 </head>
 <body id="top">
@@ -361,8 +365,106 @@
     </div>-->
 </section>
 
-
-
+<section id="registry" class="section-padding">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h3 class="header">Gift Registry</h3>
+            </div>
+        </div>
+        <div id="multiCardCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+        
+                <!-- Slide 1 -->
+                <div class="carousel-item active">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="card">
+                                <div class="img-wrapper"><img src="https://smithey.com/cdn/shop/files/hero-1_2_700x.png?v=1695307136" class="d-block w-100" alt="..."> </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title 1</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                                        card's content.</p>
+                                    <a href="#" class="btn btn-primary">Buy</a>
+                                    <a href="#" class="btn btn-primary">I have purchased this</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="https://smithey.com/cdn/shop/files/hero-1_2_700x.png?v=1695307136" class="card-img-top" alt="Image 2">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card 2</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="https://smithey.com/cdn/shop/files/hero-1_2_700x.png?v=1695307136" class="card-img-top" alt="Image 3">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card 3</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Slide 2 -->
+                <div class="carousel-item">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="https://smithey.com/cdn/shop/files/hero-1_2_700x.png?v=1695307136" class="card-img-top" alt="Image 4">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card 4</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="https://smithey.com/cdn/shop/files/hero-1_2_700x.png?v=1695307136" class="card-img-top" alt="Image 5">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card 5</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="https://smithey.com/cdn/shop/files/hero-1_2_700x.png?v=1695307136" class="card-img-top" alt="Image 6">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card 6</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+            </div>
+        
+            <!-- Navigation Buttons -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#multiCardCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#multiCardCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        
+        </div>
+    </div>
+    <div class="container">
+        <div class="row hidden-lg hidden-md hidden-xs">
+            <div class="col-xs-12 section-border section-padding"></div>
+        </div>
+    </div>
+    <!--<div class="row">
+        <div class="col-md-12">
+            <div class="diamond floating-logo">
+                <img src="img/sketch-logo.png" alt="Sketch Logo">
+                <div class="ring"></div>
+            </div>
+        </div>
+    </div>-->
+</section>
 
 <section id="video-bg" class="hidden-sm hidden-xs">
     <div id="bgndVideo" class="player"
