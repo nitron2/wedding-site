@@ -1,0 +1,10 @@
+#multiCardCarousel .carousel-control-prev,
+#multiCardCarousel .carousel-control-next {
+    width: auto; /* Reduce width so it doesn't cover everything */
+    height: auto; /* Set a reasonable height */
+    top: 50%; /* Position them at the middle */
+    transform: translateY(-50%);
+    /* background-color: rgba(0, 0, 0, 0.2); /* Optional: Add slight background */
+    padding: 5px; /* Reduce padding */
+    border-radius: 50%; /* Make it round */
+}
